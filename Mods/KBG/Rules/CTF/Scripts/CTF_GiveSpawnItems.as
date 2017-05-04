@@ -1,4 +1,4 @@
-// spawn resources
+//spawn resources
 
 #include "RulesCore.as";
 #include "CTF_Structs.as";

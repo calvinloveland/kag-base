@@ -1,4 +1,4 @@
-﻿// Quarters.as
+﻿//Quarters.as
 
 #include "Requirements.as";
 #include "ShopCommon.as";
