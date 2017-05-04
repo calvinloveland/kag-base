@@ -249,7 +249,7 @@ void onTick(CRules@ this)
                             if((!isShop || name.find("builder")!= -1) && spot.getTeamNum() == playerTeamNum)
                             {
                                 CBlob@[] storages;
-                                getBlobsByName("storage",@storages)
+                                getBlobsByName("storage",@storages);
                                 for (uint i = 0; i < storages.length; ++i)
                                 {
                                     if(storages[i].getTeamNum() == playerTeamNum){
@@ -258,8 +258,8 @@ void onTick(CRules@ this)
                                 }
                                 if(bestStorage !is null && canGetSpawnmats(this, p, core))
                                 {
-                                    SetMaterials(bestStorage, "mat_wood", 30)
-                                    SetMaterials(bestStorage, "mat_stone", 30)
+                                    SetMaterials(bestStorage, "mat_wood", 30);
+                                    SetMaterials(bestStorage, "mat_stone", 30);
                                     resetTimer = true;
                                 }
                             }
