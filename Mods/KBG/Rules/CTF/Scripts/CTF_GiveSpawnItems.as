@@ -245,10 +245,11 @@ void onTick(CRules@ this)
 					    CPlayer@ p = overlapped.getPlayer();
 					    if (p !is null){
 					        bool resetTimer = false;
-                            playerTeamNum =  p.getTeamNum();
+                            u8 playerTeamNum =  p.getTeamNum();
                             if((!isShop || name.find("builder")!= -1) && spot.getTeamNum() == playerTeamNum)
                             {
                                 CBlob@[] storages;
+                                CBlob@ bestStorage;
                                 getBlobsByName("storage",@storages);
                                 for (uint i = 0; i < storages.length; ++i)
                                 {
