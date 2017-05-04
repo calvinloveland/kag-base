@@ -187,6 +187,7 @@ bool doGiveSpawnMats(CRules@ this, CPlayer@ p, CBlob@ b, RulesCore@ core)
 
 		return GiveSpawnResources(this, b, p, info);
 	}
+    return false;
 }
 
 // normal hooks
@@ -244,7 +245,7 @@ void onTick(CRules@ this)
 					    CPlayer@ p = overlapped.getPlayer();
 					    if (p !is null){
 					        bool resetTimer = false;
-                            playerTeamNum =  p.getTeamNum()
+                            playerTeamNum =  p.getTeamNum();
                             if((!isShop || name.find("builder")!= -1) && spot.getTeamNum() == playerTeamNum)
                             {
                                 CBlob@[] storages;
